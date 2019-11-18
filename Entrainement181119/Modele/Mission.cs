@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entrainement181119.Modele;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -13,20 +14,22 @@ namespace Entrainement181119
         private string _nom;
         private string _description;
         private int _nbHeurePrevus;
-        private Dictionary<string, int> _releveHoraire = new Dictionary<string, int>();
+        private Dictionary<DateTime, int> _releveHoraire;
         static ArrayList CollClasseMission = new ArrayList();
+        private Intervenant _executant;
 
         #endregion
         #region Constructeur
 
 
-        public Mission(string nom, string description, int nbHeurePrevus, Dictionary<string, int> releveHoraire)
+        public Mission(string nom, string description, int nbHeurePrevus, Intervenant executant)
         {
             Nom = nom;
             Description = description;
             NbHeurePrevus = nbHeurePrevus;
-            ReleveHoraire = releveHoraire;
+            ReleveHoraire = new Dictionary<DateTime, int>();
             Mission.CollClasseMission.Add(this);
+            this._executant = executant;
 
 
         }
@@ -38,13 +41,14 @@ namespace Entrainement181119
         public string Nom { get => _nom; set => _nom = value; }
         public string Description { get => _description; set => _description = value; }
         public int NbHeurePrevus { get => _nbHeurePrevus; set => _nbHeurePrevus = value; }
-        public Dictionary<string, int> ReleveHoraire { get => _releveHoraire; set => _releveHoraire = value; }
+        public Dictionary<DateTime, int> ReleveHoraire { get => _releveHoraire; set => _releveHoraire = value; }
         #endregion
 
         #region Methode
 
         public Dictionary<string, int> getRevelveHoraire()
         {
+            //todo
             
         }
 
