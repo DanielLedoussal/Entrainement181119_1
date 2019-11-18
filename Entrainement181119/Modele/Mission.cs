@@ -51,6 +51,16 @@ namespace Entrainement181119
             this.ReleveHoraire.Add(jours, nbHeure);
         }
         
+        public int nbHeureEffectuees()
+        {
+            int resultat = 0;
+
+            foreach(KeyValuePair<DateTime,int> pair in this.ReleveHoraire){
+                resultat += pair.Value;
+            }
+
+            return resultat;
+        }
         #endregion
     }
 }
