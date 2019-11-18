@@ -54,6 +54,14 @@ namespace Entrainement181119.Modele
                 }
                 return resultat;
             }
+        } public int MargeBruteCourante()
+        {
+            // retourne la différence entre le prix facturé au chapitre main d’œuvre et le coût des
+            // heures de main d’œuvre effectuées pour l’ensemble des missions du projet
+
+            //prix facturé  
+            //Cout des heure de main d'oeuvre   cumulCoutMO()
+            return (this.PrixfactureMO - this.cumulCoutMO());
         }
 
     }
