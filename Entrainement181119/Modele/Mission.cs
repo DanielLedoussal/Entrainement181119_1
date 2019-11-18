@@ -46,12 +46,11 @@ namespace Entrainement181119
 
         #region Methode
 
-        public Dictionary<string, int> getRevelveHoraire()
+        public void AjoutReleve(DateTime jours, int nbHeure)
         {
-            //todo
-            
+            this.ReleveHoraire.Add(jours, nbHeure);
         }
-
+        
         #endregion
     }
 }
